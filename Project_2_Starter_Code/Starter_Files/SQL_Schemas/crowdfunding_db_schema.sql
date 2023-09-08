@@ -1,5 +1,5 @@
 ﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
-drop table campaign;
+-- drop table campaign;
 
 CREATE TABLE Campaign (
     cf_id int   NOT NULL,
@@ -48,10 +48,10 @@ CREATE TABLE Contacts (
 );
 
 ALTER TABLE Campaign ADD CONSTRAINT fk_Campaign_contact_id FOREIGN KEY(contact_id)
-REFERENCES Contacts ("contact_id");
+REFERENCES Contacts (contact_id);
 
 ALTER TABLE Campaign ADD CONSTRAINT fk_Campaign_category_id FOREIGN KEY(category_id)
-REFERENCES Category ("category_id");
+REFERENCES Category (category_id);
 
 ALTER TABLE Campaign ADD CONSTRAINT fk_Campaign_subcategory_id FOREIGN KEY(subcategory_id)
 REFERENCES Subcategory (subcategory_id);
