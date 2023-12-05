@@ -1,13 +1,41 @@
-# Crowdfunding_ETL
-Project 2
+# Extract, Transform, and Load Project
 
-Outside Assistance:
-1. The idea splitting of categories and subcategories based on the '/' was provided from the website SaturnCloud (SaturnCloud, 2023).
-2. Some of the logic for the creation of the 'groupedcategory_df' dataframe was provided by a post in StackOverflow (StackOverflow, 2020).
-3. Instructor Richard Wanjohi and Andy Vicario assisted with the developement of the creation of the 'groupedcategory_df' dataframe, the datetime conversions, and the iteration of the dict_values list.
+## Background
 
-References:
+In an effort to better organize crowdfunding data for a fictional company, I have been tasked with extracting the data from a company's csv file, cleaning the data, and loading it into a SQL database. Using python, I extracted the csv file into a pandas dataframe, transformed and cleaned the data for SQL readability using python functions, and loaded it into a SQL database.
 
-SaturnCloud. (2023, June 19). How to Split One Column into Multiple Columns in Pandas DataFrame. SaturnCloud. https://saturncloud.io/blog/how-to-split-one-column-into-multiple-columns-in-pandas-dataframe/#:~:text=One%20way%20to%20split%20a,strings%20based%20on%20a%20separator.
+## Extract, Transform, and Load (ETL)
 
-StackOverflow. (2020, October 03). Pandas : new column with index of unique values of another column. StackOverflow. https://stackoverflow.com/questions/64168703/pandas-new-column-with-index-of-unique-values-of-another-column/64169938#64169938.
+First, we needed to extract and trasnform the 'crowdfunding.xlsx' excel file to create a dataframe to have the following columns:
+
+* The "cf_id" column
+
+* The "contact_id" column
+
+* The "company_name" column
+
+* The "blurb" column, renamed to "description"
+
+* The "goal" column, converted to the float data type
+
+* The "pledged" column, converted to the float data type
+
+* The "outcome" column
+
+* The "backers_count" column
+
+* The "country" column
+
+* The "currency" column
+
+* The "launched_at" column, renamed to "launch_date" and with the UTC times converted to the datetime format
+
+* The "deadline" column, renamed to "end_date" and with the UTC times converted to the datetime format
+
+* The "category_id" column, with unique identification numbers matching those in the "category_id" column of the category DataFrame
+
+* The "subcategory_id" column, with the unique identification numbers matching those in the "subcategory_id" column of the subcategory DataFrame
+
+![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/5f658439-d8de-4a3f-bdcd-c14bb6d4afe9)
+
+**Figure 1.** *The finished dataframe 
