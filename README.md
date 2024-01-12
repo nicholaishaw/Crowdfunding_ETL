@@ -1,7 +1,7 @@
 # Extract, Transform, and Load Project
 
 ## Background
-A fictional company has asked me to better organize their crowdfunding data. This company keeps their data in excel but needs it to be cleaned and uploaded to a SQL database to make the data handling process more efficient and organized. I have been tasked with extracting the data from a company's csv file, cleaning the data, and loading it into a SQL database. Using python, I extracted the csv file into a pandas dataframe, transformed and cleaned the data for SQL readability using python functions, and loaded it into a SQL database.
+A fictional company has asked me to better organize their crowdfunding data. This company kept their data in one excel worksheet, but they need it to be cleaned and uploaded to a SQL database to make the data handling process more efficient and organized. I have been tasked with extracting the data from a company's csv file into a jupytern notebook, cleaning it, separating the data into four dataframes using python, and then loading the four dataframes into a SQL database. 
 
 ## Extract, Transform, and Load (ETL) Process
 
