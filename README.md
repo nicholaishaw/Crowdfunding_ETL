@@ -37,4 +37,4 @@ First, we needed to extract and trasnform the 'crowdfunding.xlsx' excel file to 
 
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/5f658439-d8de-4a3f-bdcd-c14bb6d4afe9)
 
-**Figure 1.** *The finished dataframe 
+**Figure 1.** *A screenshot of finished dataframe including a few of the clean columns.*
