@@ -1,6 +1,3 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- drop table campaign;
-
 CREATE TABLE Campaign (
     cf_id int   NOT NULL,
     contact_id int   NOT NULL,
