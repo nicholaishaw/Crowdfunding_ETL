@@ -7,7 +7,29 @@ A fictional company has asked me to better organize their crowdfunding data. Thi
 
 To accomplish our goal of loading the excel workbook into a SQL database, we have to separate the data into four distinct dataframes. We will do this in a jupyter notebook using python.
 
-First, we needed to extract and trasnform the 'crowdfunding.xlsx' excel file to create a campaign dataframe to have the following columns:
+First, I extracted the raw excel workbook and put it into an pandas dataframe.
+
+![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/89d56eea-527c-4c3d-bc09-75a1df8b2af8)
+
+**Figure 1.** *A snapshot of the raw data from the excel workbook in a pandas dataframe. Full table is in the jupyter file in the main branch of this repository*
+
+
+After I put the raw data into a pandas dataframe, I created a 'Category' dataframe that contains:
+
+* A "category_id" column that has entries going sequentially from "cat1" to "catn", where n is the number of unique categories
+
+* A "category" column that contains only the category titles
+
+I accomplished this by splitting the categories and subcategories into separate columns in the dataframe. Then, I created a list of all of the unique categories in the database and assigned them to a category number based on how many categories there were in the database.
+
+This dataframe was loaded into the SQL database as a table named 'Category.'
+
+![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/b686ef39-2b70-4ed8-9828-990da47ec079)
+
+**Figure 2.** *Category dataframe.*
+
+
+Second, I extracted and trasnformed the 'crowdfunding.xlsx' excel file to create a campaign dataframe to have the following columns:
 
 * The "cf_id" column
 
@@ -41,4 +63,4 @@ This will be our first dataframe and will be uploaded into the table named 'Camp
 
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/5f658439-d8de-4a3f-bdcd-c14bb6d4afe9)
 
-**Figure 1.** *A screenshot of finished dataframe including a few of the columns.*
+**Figure 3.** *A screenshot of finished dataframe including a few of the columns.*
