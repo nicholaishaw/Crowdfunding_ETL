@@ -1,11 +1,13 @@
 # Extract, Transform, and Load Project
 
 ## Background
-A fictional company has asked me to better organize their crowdfunding data. This company kept their data in one excel worksheet, but they need it to be cleaned and uploaded to a SQL database to make the data handling process more efficient and organized. I have been tasked with extracting the data from a company's csv file into a jupytern notebook, cleaning it, separating the data into four dataframes using python, and then loading the four dataframes into a SQL database. 
+A fictional company has asked me to better organize their crowdfunding data. This company kept their data in one excel workbook, but the company wants the data to be loaded into a SQL database to make the data handling process more efficient and organized. To do this, I had to separate the data into four separate dataframes with relational connection to each other. These four dataframes will be separate tables in the SQL database, and their relationships with each other are illustrated in the entity-relationship diagram. I have been tasked with extracting the data from a company's csv file into a jupytern notebook, cleaning it, separating the data into four dataframes using python, and then loading the four dataframes into a SQL database. 
 
 ## Extract, Transform, and Load (ETL) Process
 
-First, we needed to extract and trasnform the 'crowdfunding.xlsx' excel file to create a dataframe to have the following columns:
+To accomplish our goal of loading the excel workbook into a SQL database, we have to separate the data into four distinct dataframes. We will do this in a jupyter notebook using python.
+
+First, we needed to extract and trasnform the 'crowdfunding.xlsx' excel file to create a campaign dataframe to have the following columns:
 
 * The "cf_id" column
 
@@ -35,6 +37,8 @@ First, we needed to extract and trasnform the 'crowdfunding.xlsx' excel file to 
 
 * The "subcategory_id" column, with the unique identification numbers matching those in the "subcategory_id" column of the subcategory DataFrame
 
+This will be our first dataframe and will be uploaded into the table named 'Campaign' in the SQL database.
+
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/5f658439-d8de-4a3f-bdcd-c14bb6d4afe9)
 
-**Figure 1.** *A screenshot of finished dataframe including a few of the clean columns.*
+**Figure 1.** *A screenshot of finished dataframe including a few of the columns.*
