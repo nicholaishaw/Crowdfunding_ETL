@@ -5,7 +5,7 @@ A fictional company has asked me to better organize their crowdfunding data. Thi
 
 ## Extract, Transform, and Load (ETL) Process
 
-To accomplish our goal of loading the excel data into a SQL database, we have to separate the data into four distinct dataframes that will later be loaded as individual tables in SQL. We will do this in a jupyter notebook using python.
+To accomplish our goal of loading the excel data into a SQL database, I had to separate the data into four distinct dataframes that will later be loaded as individual tables in SQL. I performed this in a jupyter notebook using python.
 
 First, I extracted the raw excel workbook (crowdfunding.xlsx) and put it into an pandas dataframe.
 
@@ -72,8 +72,8 @@ This will be our first dataframe and will be uploaded into the table named 'Camp
 **Figure 4.** *A screenshot of finished dataframe including a few of the columns.*
 ___
 
-Finally, we created a contacts dataframe to contain the contact information for each crowdfunding organization. We included the first name, last name, email, phone number, and contact id. This dataframe will be loaded into the SQL database as 'Contacts.' The contact id will later be used as the primary key when loaded to SQL.
-We created this dataframe by extracting the contact information from the raw data and splitting the information into separate columns (i.e., first name, last name, email, and phone number).
+Finally, I created a contacts dataframe to contain the contact information for each crowdfunding organization. I included the first name, last name, email, phone number, and contact id. This dataframe will be loaded into the SQL database as 'Contacts.' The contact id will later be used as the primary key when loaded to SQL.
+I created this dataframe by extracting the contact information from the raw data and splitting the information into separate columns (i.e., first name, last name, email, and phone number).
 
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/66c2427f-618e-4f9f-afcf-3a1d72d70aaf)
 
