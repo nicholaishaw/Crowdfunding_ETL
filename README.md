@@ -1,4 +1,4 @@
-# Extract, Transform, and Load
+# Extract, Transform, and Load Using Python and SQL
 
 ## Background
 A fictional company has asked me to organize their crowdfunding data. This company kept their data in one excel workbook, but the company wants the data to be loaded into a SQL database to make the data handling process more efficient and organized. To do this, I had to separate the data into four separate dataframes with relational connection to each other. These four dataframes will be separate tables in the SQL database, and their relationships with each other are illustrated in the entity-relationship diagram. I have been tasked with extracting the data from a company's csv file into a jupytern notebook, cleaning it, separating the data into four dataframes using python, and then loading the four dataframes into a SQL database. 
