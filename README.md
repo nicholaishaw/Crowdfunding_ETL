@@ -80,7 +80,7 @@ I created this dataframe by extracting the contact information from the raw data
 **Figure 5.** *Contacts dataframe.*
 ___
 
-After the four dataframes were crated (category, subcategory, campaign, contacts), they were exctracted into excel workbooks and loaded into the SQL database as separate tables. A schema of the database and an ERD was created to illustrate the relationship between the tables.
+After the four dataframes were created (category, subcategory, campaign, contacts), they were exctracted into excel workbooks and loaded into the SQL database as separate tables. A schema of the database and an ERD was created to illustrate the relationship between the tables.
 
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/9da2807e-b49e-476d-a5d6-1993567c81f7)
 
