@@ -70,7 +70,7 @@ Next, I used Python scripts to retrieve and transform data from the original raw
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/5f658439-d8de-4a3f-bdcd-c14bb6d4afe9)
 
 **Figure 4.** *A screenshot of finished dataframe including a few of the columns.*
-___
+
 ### Contacts Table:
 Finally, I created a 'contacts' dataframe by extracting the contact information of each crowdfunding event from the company's contact excel file. This included the first name, last name, email, phone number, and contact id. I put the data in a pandas dataframe and transformed the columns to correct formatting. Since the raw excel file contained the contact id, contact name, and email in a single column, I iterated through the contact information and separated them so that the contacts dataframe could include the following columns:  
 
@@ -82,7 +82,7 @@ Finally, I created a 'contacts' dataframe by extracting the contact information 
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/66c2427f-618e-4f9f-afcf-3a1d72d70aaf)
 
 **Figure 5.** *Contacts dataframe.*
-___
+
 ### SQL Upload
 After the four dataframes were created (category, subcategory, campaign, contacts), they were exctracted into csv files and loaded into the SQL database as separate tables. I engineer a schema of the database and created an ERD to illustrate the relationship between the tables.
 
