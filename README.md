@@ -12,7 +12,7 @@ First, I extracted the raw Excel workbook (crowdfunding.xlsx) and put it into a 
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/89d56eea-527c-4c3d-bc09-75a1df8b2af8)
 
 **Figure 1.** *A snapshot of the raw data from the excel workbook in a pandas dataframe. Full table is in the notebook in the main branch of this repository*
-___
+
 ### Category and Subcategory Tables:
 Following the import of the raw data into a pandas dataframe, I proceeded to create the 'Category' and 'Subcategory' dataframes. This involved extracting category and subcategory data from the raw dataframe into new ones, which includes:
 
@@ -35,7 +35,7 @@ I accomplished this by splitting the categories and subcategories into separate 
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/1962ed0d-a59f-44a7-a68a-f4c5f638eabc)
 
 **Figure 3.** *Subcategory dataframe.*
-___
+
 ### Campaign Table:
 Next, I used Python scripts to retrieve and transform data from the original raw dataframe to form a campaign dataframe. The campaign dataframe possessed the following columns
 
