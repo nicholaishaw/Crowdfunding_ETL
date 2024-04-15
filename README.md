@@ -37,7 +37,7 @@ I accomplished this by splitting the categories and subcategories into separate 
 **Figure 3.** *Subcategory dataframe.*
 
 ### Campaign Table:
-Next, I used Python code to create a campaign dataframe by extracting necessary data from the original, raw dataframe. This dataframe included the following columns:
+Next, I used Python code to create a campaign dataframe by extracting necessary data from the original dataframe and transforming the columns to ensure proper formatting. This dataframe included the following columns:
 
 * The "cf_id" column. ***This will be the primary key when uploaded to the SQL database.***
 
