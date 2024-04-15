@@ -1,7 +1,9 @@
 # Extract, Transform, and Load Using Python and SQL
 
 ## Background
-A fictional company has asked me to organize their crowdfunding data. The crowdfunding data were previously housed in an excel workbook, but to make the data handling process more efficient and organized, the data needed to be exported to a SQL database. To do this, I had to separate the data into four separate dataframes with relational connection to each other. These four dataframes were contained in separate tables in the SQL database, and their relationships with each other were illustrated in the entity-relationship diagram. I was tasked with extracting the data from a company's csv file into a jupytern notebook, cleaning it, separating the data into four dataframes using python, and then loading the four dataframes into a SQL database. 
+For this project, I have been tasked with organizing a company's crowdfunding data—an old Excel file consisting of 1,000 companies and the key details of their crowdfunding events. To tackle this, I chose to migrate the data to a SQL database. To ensure proper organization within the database, I separated the crowdfunding data into four separate tables. The tables included the 'Category' table, a list of every unique campaign category; the 'Subcategory' table, a list of each unique subcategory in the dataframe; the 'Campaign' table, containing crucial campaign details such as IDs, company names, goals, outcomes, and dates; and finally, the 'Contacts' table, which held information for each crowdfunding organization. Once the data was organized, I created and assigned a primary key to each table.
+
+Using Python scripts, I first imported the raw Excel file into a pandas dataframe, then split the data into four pandas dataframes—each representing one of the SQL tables. I then used Python code to create and assign primary keys for each table before finally exporting the data to csv files. Once the csv files were created, I loaded it into the SQL database and created an entity-relationship diagram to illustrate the relationships between the tables. 
 
 ## Extract, Transform, and Load (ETL) Process
 
