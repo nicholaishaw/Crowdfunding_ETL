@@ -13,7 +13,6 @@ First, I extracted the raw Excel workbook (crowdfunding.xlsx) and put it into a 
 
 **Figure 1.** *A snapshot of the raw data from the excel workbook in a pandas dataframe. Full table is in the notebook in the main branch of this repository*
 ___
-
 ### Category and Subcategory Tables:
 Following the import of the raw data into a pandas dataframe, I proceeded to create the 'Category' and 'Subcategory' dataframes. This involved extracting category and subcategory data from the raw dataframe into new ones, which includes:
 
@@ -37,7 +36,6 @@ I accomplished this by splitting the categories and subcategories into separate 
 
 **Figure 3.** *Subcategory dataframe.*
 ___
-
 ### Campaign Table:
 Next, I used Python scripts to retrieve and transform data from the original raw dataframe to form a campaign dataframe. The campaign dataframe possessed the following columns
 
@@ -73,16 +71,20 @@ Next, I used Python scripts to retrieve and transform data from the original raw
 
 **Figure 4.** *A screenshot of finished dataframe including a few of the columns.*
 ___
+### Contacts Table:
+Finally, I created a 'contacts' dataframe by extracting the contact information of each crowdfunding event from the company's contact excel file. This included the first name, last name, email, phone number, and contact id. I put the data in a pandas dataframe and transformed the columns to correct formatting. Since the raw excel file contained the contact id, contact name, and email in a single column, I iterated through the contact information and separated them so that the contacts dataframe could include the following columns:  
 
-Finally, I created a contacts dataframe to contain the contact information for each crowdfunding organization. I included the first name, last name, email, phone number, and contact id. This dataframe will be loaded into the SQL database as 'Contacts.' The contact id will later be used as the primary key when loaded to SQL.
-I created this dataframe by extracting the contact information from the raw data and splitting the information into separate columns (i.e., first name, last name, email, and phone number).
+* A column named "contact_id" that contains the unique number of the contact person. *This will be the primary key when uploaded to the SQL database.*
+* A column named "first_name" that contains the first name of the contact person.
+* A column named "last_name" that contains the first name of the contact person.
+* A column named "email" that contains the email address of the contact person
 
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/66c2427f-618e-4f9f-afcf-3a1d72d70aaf)
 
 **Figure 5.** *Contacts dataframe.*
 ___
-
-After the four dataframes were created (category, subcategory, campaign, contacts), they were exctracted into excel workbooks and loaded into the SQL database as separate tables. A schema of the database and an ERD was created to illustrate the relationship between the tables.
+### SQL Upload
+After the four dataframes were created (category, subcategory, campaign, contacts), they were exctracted into csv files and loaded into the SQL database as separate tables. I engineer a schema of the database and created an ERD to illustrate the relationship between the tables.
 
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/9da2807e-b49e-476d-a5d6-1993567c81f7)
 
