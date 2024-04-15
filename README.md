@@ -7,24 +7,20 @@ Using Python scripts, I first imported the raw Excel file into a pandas datafram
 
 ## Extract, Transform, and Load (ETL) Process
 
-To accomplish our goal of loading the excel data into a SQL database, I had to separate the data into four distinct dataframes that will later be loaded as individual tables in SQL. I performed this in a jupyter notebook using python.
-
-First, I extracted the raw excel workbook (crowdfunding.xlsx) and put it into an pandas dataframe.
+First, I extracted the raw Excel workbook (crowdfunding.xlsx) and put it into a pandas dataframe.
 
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/89d56eea-527c-4c3d-bc09-75a1df8b2af8)
 
-**Figure 1.** *A snapshot of the raw data from the excel workbook in a pandas dataframe. Full table is in the jupyter file in the main branch of this repository*
+**Figure 1.** *A snapshot of the raw data from the excel workbook in a pandas dataframe. Full table is in the notebook in the main branch of this repository*
 ___
 
-After I put the raw data into a pandas dataframe, I created a 'Category' dataframe that contains:
+Following the import of the raw data into a pandas dataframe, I proceeded to create the 'Category' dataframe. This involved extracting category data from the raw dataframe into a new one, which includes:
 
-* A "category_id" column that has entries going sequentially from "cat1" to "catn", where n is the number of unique categories (this is necessary since the category id will be the primary key for this table in the SQL database.
+* A "category_id" column that is numbered sequential form 1 to the length of the number of unique categories. *This is a necessary step as it will be the primary key when uploaded to the SQL database.*
 
-* A "category" column that contains only the category titles
+* A "category" column, a list of the categories.
 
-I accomplished this by splitting the categories and subcategories into separate columns in the dataframe. Then, I created a list of all of the unique categories in the database and assigned them to a category number based on how many categories there were in the database.
-
-This dataframe was loaded into the SQL database as a table named 'Category.'
+I accomplished this by splitting the categories and subcategories into separate columns in the dataframe. Then, I retrieved each unique crowfunding category and subcategory from the raw dataset and stored them in distinct lists. Lastly, I used a list comprehension to loop through the cateogry and subcategory lists and assign them a unique id number.
 
 ![image](https://github.com/nicholaishaw/Crowdfunding_ETL/assets/135463220/b686ef39-2b70-4ed8-9828-990da47ec079)
 
